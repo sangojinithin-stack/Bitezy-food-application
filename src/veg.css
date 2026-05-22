@@ -1,0 +1,182 @@
+/* ===== Global Styles ===== */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(to right, #f8f9fa, #e9f5ec);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ===== Container ===== */
+.container {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+/* ===== Title ===== */
+.title {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2e7d32;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* ===== Grid Layout ===== */
+.grid,
+.veg-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+}
+
+/* ===== Card Design ===== */
+.card,
+.veg-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.card:hover,
+.veg-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+/* ===== Images ===== */
+.card img,
+.veg-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* ===== Price ===== */
+.price {
+  color: #2e7d32;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* ===== Description ===== */
+.desc {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+/* ===== Buttons ===== */
+button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  border: none;
+  background: linear-gradient(45deg, #4caf50, #2e7d32);
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  width: 100%;
+  max-width: 180px;
+}
+
+button:hover {
+  background: linear-gradient(45deg, #2e7d32, #1b5e20);
+}
+
+/* ===== Veg Badge ===== */
+.card::before {
+  content: "VEG";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: green;
+  color: white;
+  font-size: 10px;
+  padding: 4px 6px;
+  border-radius: 5px;
+}
+
+/* ===== Mobile Responsive ===== */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 15px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .grid,
+  .veg-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 18px;
+  }
+
+  .card img,
+  .veg-card img {
+    height: 130px;
+  }
+
+  button {
+    padding: 9px 12px;
+    font-size: 14px;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+  .container {
+    padding: 15px 10px;
+  }
+
+  .title {
+    font-size: 20px;
+    margin-bottom: 18px;
+  }
+
+  .grid,
+  .veg-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .card,
+  .veg-card {
+    padding: 12px;
+    border-radius: 15px;
+  }
+
+  .card img,
+  .veg-card img {
+    height: 180px;
+  }
+
+  .price {
+    font-size: 15px;
+  }
+
+  .desc {
+    font-size: 12px;
+  }
+
+  button {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+}

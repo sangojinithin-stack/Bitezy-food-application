@@ -1,0 +1,119 @@
+/* ONLY register page background */
+.register-page {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  font-family: Arial, sans-serif;
+}
+
+/* Form container */
+.register-page form {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 350px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Inputs */
+.register-page input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: 0.3s;
+  outline: none;
+}
+
+.register-page input:focus {
+  border-color: #2575fc;
+  box-shadow: 0 0 5px rgba(37, 117, 252, 0.5);
+}
+
+/* Button */
+.register-page button {
+  padding: 12px;
+  background: #2575fc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.register-page button:hover {
+  background: #1a5edb;
+  transform: scale(1.03);
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .register-page form {
+    width: 90%;
+  }
+}
+
+/* Existing CSS */
+
+.login-box{
+  ...
+}
+
+/* ADD THIS AT BOTTOM */
+
+.switch-text{
+  text-align:center;
+  margin-top:15px;
+  color:white;
+  font-size:15px;
+}
+
+.switch-link{
+  color:#ff9800;
+  margin-left:5px;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+.switch-link:hover{
+  text-decoration:underline;
+}
+.bitezy-title{
+  color:#ff6b00;
+  font-size:45px;
+  margin-bottom:10px;
+  font-weight:bold;
+}
+
+.switch-text{
+  margin-top:18px;
+  color:white;
+}
+
+.switch-link{
+  color:#ff6b00;
+  cursor:pointer;
+  margin-left:5px;
+  font-weight:bold;
+}
+
+.switch-link:hover{
+  text-decoration:underline;
+}
+
+.login-btn{
+  background:#ff6b00;
+  color:white;
+  border:none;
+  padding:10px 18px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:bold;
+}
