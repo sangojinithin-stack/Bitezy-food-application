@@ -17,7 +17,6 @@ import Register from "./Register";
 import Login from "./Login";
 
 import "./Food.css";
-import "./App.css";
 
 import Swal from "sweetalert2";
 

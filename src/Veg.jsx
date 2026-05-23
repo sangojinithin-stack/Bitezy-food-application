@@ -11,7 +11,7 @@ import "react-toastify/dist/ReactToastify.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 import "./Cart.css";
-import "./app.css";
+import "./App.css";
 import "./Food.css";
 
 function Veg() {
