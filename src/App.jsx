@@ -206,7 +206,7 @@ function App() {
 
     <button
       className="login-btn"
-      onClick={() => window.location.href="/login"}
+      onClick={() => navigate("/login")}
     >
 
       <i className="fa-solid fa-right-to-bracket"></i>
