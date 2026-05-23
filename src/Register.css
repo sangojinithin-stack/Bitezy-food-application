@@ -63,7 +63,9 @@
 /* Existing CSS */
 
 .login-box{
-  ...
+  width:100%;
+  max-width:420px;
+  margin:0 auto;
 }
 
 /* ADD THIS AT BOTTOM */
