@@ -16,7 +16,12 @@ function Home() {
       <div className="home-content">
 
         {/* Logo */}
-        <img src={logo} alt="logo" style={{ width: "130px" }} />
+        <img src={logo} alt="logo" style={{ width: "130px" }} style={{
+      color: "#ed4e6b",
+      fontSize: "45px",
+      fontWeight: "bold",
+      margin: 0,
+    }} />
 
         <h1 className="hero-title">Welcome to Bitezy 🍴</h1>
         <p>Delicious food at your fingertips</p>

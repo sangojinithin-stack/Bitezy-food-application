@@ -276,15 +276,15 @@ function Veg() {
           {currentItems.length > 0 ? (
             currentItems.map((item) => (
               <div className="food-card" key={item.id}>
+                
                 <div className="img-box">
-                  <img src={item.image} alt={item.name} />
+                   <img src={item.image} alt={item.name} />
                 </div>
+
 
                 <div className="food-info">
                   <h3>{item.name}</h3>
-
                   <p>{item.description}</p>
-
                   <div className="food-bottom">
                     <span className="price">₹{item.price}</span>
 
