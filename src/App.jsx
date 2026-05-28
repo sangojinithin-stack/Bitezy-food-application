@@ -25,11 +25,7 @@ import logo from "./assets/logo.svg";
 
 import { useSelector } from "react-redux";
 
-import { useNavigate } from "react-router-dom";
-
-
 function App() {
-  
 
   // CART ITEMS
 
@@ -45,11 +41,13 @@ function App() {
     0
   );
 
+  // GET USER FROM LOCAL STORAGE
 
   let user = JSON.parse(
     localStorage.getItem("loggedInUser")
   );
 
+  // LOGOUT FUNCTION
 
   let logout = () => {
 
@@ -91,7 +89,6 @@ function App() {
 
         </h2>
 
-
         {/* NAV LINKS */}
 
         <div className="nav-links">
@@ -128,6 +125,8 @@ function App() {
 
           </NavLink>
 
+          {/* CART */}
+
           <NavLink
             to="/cart"
             className="cart-nav-link"
@@ -143,6 +142,8 @@ function App() {
 
           </NavLink>
 
+          {/* ORDER */}
+
           <NavLink
             to="/order"
             className="Order-nav-link"
@@ -150,73 +151,53 @@ function App() {
 
             <i className="fa-solid fa-list"></i>
 
-
             Order
-
-            <span className="Order-badge">
-
-            </span>
 
           </NavLink>
 
+          {/* LOGIN / USER SECTION */}
 
-          {/* <NavLink
-            to="/register"
-            className="Register-nav-link"
-          >
+          {
+            user ? (
 
-            <i className="fa-solid fa-circle-user"></i>
+              <div className="user-section">
 
+                <span className="welcome-user">
 
-            Register
+                  <i className="fa-solid fa-user"></i>
 
-            <span className="Register-badge">
+                  Welcome {user.name}
 
-            </span>
+                </span>
 
-          </NavLink> */}
+                <button
+                  className="logout-btn"
+                  onClick={logout}
+                >
 
+                  <i className="fa-solid fa-right-from-bracket"></i>
 
-         {
-  user ? (
-    <div className="user-section">
+                  Logout
 
-      <span className="welcome-user">
+                </button>
 
-        <i className="fa-solid fa-user"></i>
+              </div>
 
-        Welcome {user.name}
+            ) : (
 
-      </span>
+              <NavLink
+                to="/login"
+                className="login-btn"
+              >
 
-      <button
-        className="logout-btn"
-        onClick={logout}
-      >
+                <i className="fa-solid fa-right-to-bracket"></i>
 
-        <i className="fa-solid fa-right-from-bracket"></i>
+                Login
 
-        Logout
+              </NavLink>
 
-      </button>
-
-    </div>
-
-  ) : (
-
-    <button
-      className="login-btn"
-      onClick={() => navigate("/login")}
-    >
-
-      <i className="fa-solid fa-right-to-bracket"></i>
-
-      Login
-
-    </button>
-
-  )
-}
+            )
+          }
 
         </div>
 
@@ -267,11 +248,6 @@ function App() {
         />
 
       </Routes>
-
-
-
-
-
 
     </Router>
   );
