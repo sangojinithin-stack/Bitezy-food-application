@@ -185,17 +185,9 @@ function App() {
 
             ) : (
 
-              <NavLink
-                to="/login"
-                className="login-btn"
-              >
-
-                <i className="fa-solid fa-right-to-bracket"></i>
-
-                Login
-
-              </NavLink>
-
+              <NavLink to="/login" className="login-btn">
+  Login
+</NavLink>
             )
           }
 
