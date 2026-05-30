@@ -1,403 +1,49 @@
-  100%{
-    transform:translate(0,0);
-  }
+/* Cleaned app.css — minimal responsive styles for the app */
+
+:root{
+  --primary:#ff6b6b;
+  --muted:#f5f5f5;
+  --text:#222;
 }
 
-@media (max-width: 1180px) {
-  .navbar {
-    align-items: center;
-    flex-direction: row;
-/* =========================
-   RESPONSIVE
-========================= */
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,Arial,Helvetica,sans-serif;color:var(--text);background:#fff}
 
-@media(max-width:992px){
+.navbar{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;background:transparent;position:sticky;top:0;z-index:50}
+.logo{display:flex;align-items:center;gap:12px}
+.logo img{width:72px;height:72px;border-radius:12px}
 
-  .navbar{
+.nav-links{display:flex;gap:14px;align-items:center}
+.nav-links a{color:var(--text);text-decoration:none;padding:8px 12px;border-radius:8px}
+.nav-links a.active{background:var(--muted)}
 
-    flex-direction:column;
+.cart-badge{background:var(--primary);color:#fff;border-radius:999px;padding:2px 8px;font-size:0.75rem;margin-left:8px}
 
-    gap:18px;
+.login-btn,.logout-btn{background:var(--primary);color:#fff;border:none;padding:8px 12px;border-radius:10px;cursor:pointer}
+.user-section{display:flex;gap:8px;align-items:center}
 
-    padding:18px;
-  }
+.home-content{display:flex;flex-direction:column;align-items:flex-start;padding:48px}
+.home-content h1{font-size:48px;margin:0 0 16px}
+.home-content p{font-size:18px;color:#444;max-width:720px}
 
-  .nav-links {
-    justify-content: flex-end;
-  .nav-links{
-
-    flex-wrap:wrap;
-
-    justify-content:center;
-  }
+/* Responsive */
+@media (max-width: 992px){
+  .navbar{padding:14px 18px}
+  .home-content{padding:32px}
+  .logo img{width:64px;height:64px}
 }
 
-@media (max-width: 720px) {
-  .navbar {
-    top: 10px;
-    width: calc(100% - 24px);
-    min-height: auto;
-    margin: 12px auto;
-    padding: 16px;
-    border-radius: 28px;
-  .home-content{
-
-    align-items:center;
-
-    text-align:center;
-  }
-
-  .logo img {
-    width: 64px;
-    height: 64px;
-    border-radius: 22px;
-  .menu-btn{
-
-    margin:auto;
-  }
+@media (max-width: 720px){
+  .navbar{flex-direction:column;align-items:center;gap:12px}
+  .nav-links{flex-wrap:wrap;justify-content:center}
+  .home-content{align-items:center;text-align:center;padding-top:70px;min-height:calc(100vh - 110px)}
+  .home-content h1{font-size:36px}
+  .logo img{width:58px;height:58px}
 }
 
-  .brand-name {
-    font-size: 1.55rem;
-/* MOBILE */
-
-@media(max-width:600px){
-
-  .nav-links{
-
-    gap:10px;
-  }
-
-  .brand-tag {
-    font-size: 0.72rem;
-  .nav-links a{
-
-    font-size:13px;
-
-    padding:10px 12px;
-  }
-
-  .nav-links {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  .logo img{
-
-    width:58px;
-    height:58px;
-  }
-
-  .nav-links a,
-  .logout-btn,
-  .welcome-user {
-    min-width: 0;
-    min-height: 48px;
-    padding: 0 12px;
-    border-radius: 20px;
-    font-size: 0.88rem;
-  .brand-copy{
-    display:none;
-  }
-
-  .login-btn{
-
-    padding:11px 18px;
-
-    font-size:13px;
-  }
-
-  .user-section {
-    grid-column: 1 / -1;
-    align-items: stretch;
-    flex-direction: column;
-  .hero-title,
-  .home-content h1{
-
-    font-size:44px;
-  }
-
-  .home-content {
-    align-items: center;
-    min-height: calc(100vh - 110px);
-    padding-top: 70px;
-    text-align: center;
-  .home-content p{
-
-    font-size:16px;
-  }
-
-  .menu-btn {
-    margin: 0 auto;
-  .user-section{
-
-    flex-direction:column;
-  }
-}  100%{
-    transform:translate(0,0);
-  }
+@media (max-width: 420px){
+  .home-content h1{font-size:28px}
+  .nav-links a{font-size:14px;padding:8px 10px}
 }
 
-@media (max-width: 1180px) {
-  .navbar {
-    align-items: center;
-    flex-direction: row;
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media(max-width:992px){
-
-  .navbar{
-
-    flex-direction:column;
-
-    gap:18px;
-
-    padding:18px;
-  }
-
-  .nav-links {
-    justify-content: flex-end;
-  .nav-links{
-
-    flex-wrap:wrap;
-
-    justify-content:center;
-  }
-}
-
-@media (max-width: 720px) {
-  .navbar {
-    top: 10px;
-    width: calc(100% - 24px);
-    min-height: auto;
-    margin: 12px auto;
-    padding: 16px;
-    border-radius: 28px;
-  .home-content{
-
-    align-items:center;
-
-    text-align:center;
-  }
-
-  .logo img {
-    width: 64px;
-    height: 64px;
-    border-radius: 22px;
-  .menu-btn{
-
-    margin:auto;
-  }
-}
-
-  .brand-name {
-    font-size: 1.55rem;
-/* MOBILE */
-
-@media(max-width:600px){
-
-  .nav-links{
-
-    gap:10px;
-  }
-
-  .brand-tag {
-    font-size: 0.72rem;
-  .nav-links a{
-
-    font-size:13px;
-
-    padding:10px 12px;
-  }
-
-  .nav-links {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  .logo img{
-
-    width:58px;
-    height:58px;
-  }
-
-  .nav-links a,
-  .logout-btn,
-  .welcome-user {
-    min-width: 0;
-    min-height: 48px;
-    padding: 0 12px;
-    border-radius: 20px;
-    font-size: 0.88rem;
-  .brand-copy{
-    display:none;
-  }
-
-  .login-btn{
-
-    padding:11px 18px;
-
-    font-size:13px;
-  }
-
-  .user-section {
-    grid-column: 1 / -1;
-    align-items: stretch;
-    flex-direction: column;
-  .hero-title,
-  .home-content h1{
-
-    font-size:44px;
-  }
-
-  .home-content {
-    align-items: center;
-    min-height: calc(100vh - 110px);
-    padding-top: 70px;
-    text-align: center;
-  .home-content p{
-
-    font-size:16px;
-  }
-
-  .menu-btn {
-    margin: 0 auto;
-  .user-section{
-
-    flex-direction:column;
-  }
-}  100%{
-    transform:translate(0,0);
-  }
-}
-
-@media (max-width: 1180px) {
-  .navbar {
-    align-items: center;
-    flex-direction: row;
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media(max-width:992px){
-
-  .navbar{
-
-    flex-direction:column;
-
-    gap:18px;
-
-    padding:18px;
-  }
-
-  .nav-links {
-    justify-content: flex-end;
-  .nav-links{
-
-    flex-wrap:wrap;
-
-    justify-content:center;
-  }
-}
-
-@media (max-width: 720px) {
-  .navbar {
-    top: 10px;
-    width: calc(100% - 24px);
-    min-height: auto;
-    margin: 12px auto;
-    padding: 16px;
-    border-radius: 28px;
-  .home-content{
-
-    align-items:center;
-
-    text-align:center;
-  }
-
-  .logo img {
-    width: 64px;
-    height: 64px;
-    border-radius: 22px;
-  .menu-btn{
-
-    margin:auto;
-  }
-}
-
-  .brand-name {
-    font-size: 1.55rem;
-/* MOBILE */
-
-@media(max-width:600px){
-
-  .nav-links{
-
-    gap:10px;
-  }
-
-  .brand-tag {
-    font-size: 0.72rem;
-  .nav-links a{
-
-    font-size:13px;
-
-    padding:10px 12px;
-  }
-
-  .nav-links {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  .logo img{
-
-    width:58px;
-    height:58px;
-  }
-
-  .nav-links a,
-  .logout-btn,
-  .welcome-user {
-    min-width: 0;
-    min-height: 48px;
-    padding: 0 12px;
-    border-radius: 20px;
-    font-size: 0.88rem;
-  .brand-copy{
-    display:none;
-  }
-
-  .login-btn{
-
-    padding:11px 18px;
-
-    font-size:13px;
-  }
-
-  .user-section {
-    grid-column: 1 / -1;
-    align-items: stretch;
-    flex-direction: column;
-  .hero-title,
-  .home-content h1{
-
-    font-size:44px;
-  }
-
-  .home-content {
-    align-items: center;
-    min-height: calc(100vh - 110px);
-    padding-top: 70px;
-    text-align: center;
-  .home-content p{
-
-    font-size:16px;
-  }
-
-  .menu-btn {
-    margin: 0 auto;
-  .user-section{
-
-    flex-direction:column;
-  }
-}
+.hidden{display:none}
